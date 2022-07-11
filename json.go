@@ -32,7 +32,7 @@ func (j *JSON[T]) Scan(value interface{}) error {
 	}
 
 	var v T
-	if err := json.Unmarshal(b, v); err != nil {
+	if err := json.Unmarshal(b, &v); err != nil {
 		return err
 	}
 
