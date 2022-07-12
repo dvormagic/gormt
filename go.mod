@@ -1,4 +1,4 @@
-module gormt
+module github.com/dvormagic/gormt
 
 go 1.18
 
