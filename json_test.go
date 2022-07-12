@@ -11,13 +11,6 @@ type simpleStruct struct {
 	IntField    int64  `json:"intField"`
 }
 
-type complexStruct struct {
-	String  string `json:"string"`
-	Integer int64  `json:"integer"`
-
-	StructSlice []*simpleStruct `json:"structSlice"`
-}
-
 func TestSetValueSimpleStruct(t *testing.T) {
 	var testJSON JSON[simpleStruct]
 
