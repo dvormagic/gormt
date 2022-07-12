@@ -41,14 +41,14 @@ func TestScanGetSimpleStruct(t *testing.T) {
 	require.NoError(t, err)
 
 	foo := testJSON.Get()
-	require.Equal(t, "foo", foo.StringField, "string should be equal")
-	require.Equal(t, int64(5), foo.IntField, "integer should be equal")
+	require.Equal(t, "foo", foo.StringField)
+	require.Equal(t, int64(5), foo.IntField)
 }
 
 func TestGetDataType(t *testing.T) {
 	var testJSON JSON[simpleStruct]
 
-	require.Equal(t, "json", testJSON.GormDataType(), "string should be equal")
+	require.Equal(t, "json", testJSON.GormDataType())
 }
 
 func TestErrByteAssertion(t *testing.T) {
@@ -56,7 +56,7 @@ func TestErrByteAssertion(t *testing.T) {
 
 	err := testJSON.Scan(`{"stringField":"foo","intField":5}`)
 	require.Error(t, err)
-	require.Equal(t, "[]byte assertion failed", err.Error(), "error message should be equal")
+	require.Equal(t, "[]byte assertion failed", err.Error())
 }
 
 func TestErrUnmarshal(t *testing.T) {
