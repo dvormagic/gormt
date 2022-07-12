@@ -17,19 +17,9 @@ where *info* will contains a JSON like:
 
 ``` json
 { 
-    "id": "uuid", 
-    "Info": [
-        {
-            "sender": "Dvor",
-            "recipient": "Magic",
-            "content": "Hello World"
-        },
-        {
-            "sender": "Me",
-            "recipient": "You",
-            "content": "It's him"
-        },
-    ]
+  "sender": "Dvor",
+  "recipient": "Magic",
+  "content": "Hello World"
 }
 ```
 
