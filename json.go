@@ -13,6 +13,7 @@ type JSON[T any] struct {
 func (j *JSON[T]) Get() T {
 	return j.inner
 }
+
 func (j *JSON[T]) Set(v T) {
 	j.inner = v
 }
