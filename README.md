@@ -38,4 +38,4 @@ type Info struct {
 }
 ```
 
-GORM requires the customized data type to implement the Scanner and Valuer interfaces. This way GORM knowns to how to receive/save it into the database. But using this library you get rid of any complication. You just need to add the label `gormt.JSON[[]*CustomType]` with your custom type and you are good to go!
+GORM requires the customized data type to implement the Scanner and Valuer interfaces. This way GORM knowns to how to receive/save it into the database. But using this library you get rid of any complication. You just need to add the label `gormt.JSON[T]` where T could be your custom type and you are good to go!
