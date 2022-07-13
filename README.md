@@ -32,9 +32,9 @@ type Letter struct {
 }
 
 type Info struct {
-  Sender      string
-  Recipient   string
-  Content     string
+	Sender    string `json:"sender"`
+	Recipient string `json:"recipient"`
+	Content   string `json:"content"`
 }
 ```
 
